@@ -1,0 +1,218 @@
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing : border-box;
+	font-family: 'poppins',sans-serif;
+}
+
+.navbar a{
+	position: relative;
+	display:inline-blockl;
+	font-size: 18px;
+	color: blue;
+	text-decoration: none;
+	font-weight: 500;
+	margin-right: 35px;
+	text-align: right;
+	
+  
+}
+
+body {
+    background: linear-gradient(
+        -45deg,
+        #e0c3fc,
+        #8ec5fc,
+        #fbc2eb,
+        #a6c1ee
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.Me{
+    display: block;
+	margin-left: 25%;
+	margin-right: auto;
+	width: 50%;
+}
+
+.campus{
+	display: block;
+	margin-left:25%;
+	margin-right: auto;
+	width: 50%;
+}
+
+.campus p{
+	
+	text-align: 30%;
+}
+
+.phar p{
+  animation-duration: 3s;
+  animation-name: slide-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.st{
+	animation-duration: 3s;
+  	animation-name: slide-in;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #1a1a1a, #333);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    opacity: 0;
+    animation: navFade 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ff00ff;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ff00ff;
+}
+
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.st h1 {
+    margin: 30px 0;
+    animation: slideDown 1s ease;
+}
+
+
+.Me {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Me img {
+    border-radius: 50%;
+    border: 4px solid #ff00ff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.Me img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 10px 25px rgba(255, 0, 255, 0.4);
+}
+
+
+.phar {
+    width: 80%;
+    margin: 30px auto;
+    line-height: 1.7;
+    animation: fadeUp 1.2s ease;
+}
+
+
+.campus {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.campus img {
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.campus img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+p {
+    width: 80%;
+    margin: auto;
+    animation: fadeUp 1.5s ease;
+}
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

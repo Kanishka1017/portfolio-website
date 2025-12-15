@@ -1,0 +1,197 @@
+body{
+    background-color: lightblue;
+}
+
+.container .card h2{
+    font-weight: 500;
+}
+
+.navbar a{
+	position: relative;
+	display:inline-blockl;
+	font-size: 18px;
+	color: blue;
+	text-decoration: none;
+	font-weight: 500;
+	margin-right: 35px;
+	text-align: right;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+body {
+    background: linear-gradient(
+        -45deg,
+        #a1c4fd,
+        #c2e9fb,
+        #d4a5ff,
+        #b8c6db
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 14s ease infinite;
+}
+
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.navbar {
+    background: linear-gradient(90deg, #1a1a1a, #333);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    opacity: 0;
+    animation: navFade 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ff00ff;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ff00ff;
+}
+
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+header h1 {
+    margin: 30px 0;
+    animation: slideDown 1s ease;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: fadeUp 1.2s ease;
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    font-size: 17px;
+    padding: 8px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card ul li:hover {
+    transform: translateX(8px);
+    color: #7b00ff;
+}
+
+.HTML {
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    animation: fadeUp 1.4s ease;
+}
+
+.HTML h2 {
+    margin-bottom: 10px;
+    animation: slideLeft 1s ease;
+}
+
+.HTML p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
